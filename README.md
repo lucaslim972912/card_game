@@ -1,6 +1,6 @@
 # card_game
 
-A new Flutter project.
+A new Flutter project for card_game.
 
 ## Getting Started
 
