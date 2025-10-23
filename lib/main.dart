@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Card Game by Lucas'),
     );
   }
 }
@@ -104,9 +104,22 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'This was built by Lucas. Following number show pushed times:',
+            Card(
+              margin: const EdgeInsets.all(120.0),
+              child: Column(
+                children: [
+                  _counter % 2 == 1
+                      ? Image.asset('assets/images/as.png')
+                      : Image.asset('assets/images/kh.png'),
+                  const ListTile(
+                    title: Text('Card'),
+                    subtitle: Text('This is a simple card.'),
+                  ),
+                ],
+              ),
             ),
+            // Image.asset('assets/images/as.png'),
+            const Text('Pushed times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
